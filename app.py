@@ -38,7 +38,7 @@ def generate():
         use_special = "use_special" in request.form
 
         root = ET.Element("Passwords")
-        for _ in range(min(num_passwords, 10)):  
+        for _ in range(min(num_passwords, 50)):  
             entry = ET.SubElement(root, "Entry")
             ET.SubElement(entry, "Password").text = generate_password(
                 length=password_length, 
